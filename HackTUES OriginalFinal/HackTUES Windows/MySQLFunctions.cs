@@ -118,7 +118,27 @@ namespace HackTUES3
                 MySqlDataAdapter msdt = new MySqlDataAdapter(cmdInsrt);
                 DataSet dt = new DataSet();
                 msdt.Fill(dt);
-                dgv.DataSource = dt.Tables[0];
+                DataTable dtb = new DataTable();
+                dtb.Columns.Add(new DataColumn("1",typeof(string)));
+                dtb.Columns.Add(new DataColumn("2", typeof(string)));
+                dtb.Columns.Add(new DataColumn("3", typeof(string)));
+                dtb.Columns.Add(new DataColumn("4", typeof(string)));
+                dtb.Columns.Add(new DataColumn("5", typeof(string)));
+
+                for (int i = 1; i <= 8; i++ )
+                {
+                    DataRow dr = dtb.NewRow();
+                    dtb.Rows.Add(dr);
+                }
+
+                foreach(DataRow row in dt.Tables[0].Rows)
+                {
+                    int r = (int)row["num_subject"] - 1;
+                    string c = row["week_day"].ToString();
+                    dtb.Rows[r][c] = row["name"].ToString();
+                    
+                }
+                dgv.DataSource = dtb;
 
                 dgv.Refresh();
             }

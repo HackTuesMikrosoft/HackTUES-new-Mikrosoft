@@ -34,11 +34,6 @@
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Srqda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Chetwyrtyk = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Petyk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.Button();
             this.DClass = new System.Windows.Forms.Button();
             this.CClass = new System.Windows.Forms.Button();
@@ -51,6 +46,13 @@
             this.Class10 = new System.Windows.Forms.Button();
             this.Class9 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Port = new System.Windows.Forms.Label();
+            this.PortTextBox = new System.Windows.Forms.TextBox();
+            this.IPtextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Close = new System.Windows.Forms.Button();
+            this.Connect = new System.Windows.Forms.Button();
+            this.Host = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button20 = new System.Windows.Forms.Button();
@@ -76,6 +78,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.button21 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -87,15 +91,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Host = new System.Windows.Forms.Button();
-            this.Connect = new System.Windows.Forms.Button();
-            this.Close = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.IPtextBox = new System.Windows.Forms.TextBox();
-            this.PortTextBox = new System.Windows.Forms.TextBox();
-            this.Port = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Monday = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Srqda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Chetwyrtyk = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Petyk = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -170,6 +170,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -181,40 +183,11 @@
             this.Petyk});
             this.dataGridView1.Location = new System.Drawing.Point(120, 44);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(557, 158);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(864, 378);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.Visible = false;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Monday
-            // 
-            this.Monday.HeaderText = "Понеделник";
-            this.Monday.Name = "Monday";
-            this.Monday.Width = 94;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Вторник";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 74;
-            // 
-            // Srqda
-            // 
-            this.Srqda.HeaderText = "Сряда";
-            this.Srqda.Name = "Srqda";
-            this.Srqda.Width = 63;
-            // 
-            // Chetwyrtyk
-            // 
-            this.Chetwyrtyk.HeaderText = "Четвъртък";
-            this.Chetwyrtyk.Name = "Chetwyrtyk";
-            this.Chetwyrtyk.Width = 88;
-            // 
-            // Petyk
-            // 
-            this.Petyk.HeaderText = "Петък";
-            this.Petyk.Name = "Petyk";
-            this.Petyk.Width = 64;
             // 
             // Update
             // 
@@ -356,6 +329,65 @@
             this.tabPage3.Size = new System.Drawing.Size(984, 504);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Чат";
+            // 
+            // Port
+            // 
+            this.Port.AutoSize = true;
+            this.Port.Location = new System.Drawing.Point(798, 233);
+            this.Port.Name = "Port";
+            this.Port.Size = new System.Drawing.Size(26, 13);
+            this.Port.TabIndex = 8;
+            this.Port.Text = "Port";
+            // 
+            // PortTextBox
+            // 
+            this.PortTextBox.Location = new System.Drawing.Point(801, 249);
+            this.PortTextBox.Name = "PortTextBox";
+            this.PortTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PortTextBox.TabIndex = 7;
+            // 
+            // IPtextBox
+            // 
+            this.IPtextBox.Location = new System.Drawing.Point(801, 193);
+            this.IPtextBox.Name = "IPtextBox";
+            this.IPtextBox.Size = new System.Drawing.Size(100, 20);
+            this.IPtextBox.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(798, 176);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(17, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "IP";
+            // 
+            // Close
+            // 
+            this.Close.Location = new System.Drawing.Point(801, 130);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(112, 33);
+            this.Close.TabIndex = 4;
+            this.Close.Text = "Close";
+            this.Close.UseVisualStyleBackColor = true;
+            // 
+            // Connect
+            // 
+            this.Connect.Location = new System.Drawing.Point(801, 75);
+            this.Connect.Name = "Connect";
+            this.Connect.Size = new System.Drawing.Size(112, 33);
+            this.Connect.TabIndex = 3;
+            this.Connect.Text = "Connect";
+            this.Connect.UseVisualStyleBackColor = true;
+            // 
+            // Host
+            // 
+            this.Host.Location = new System.Drawing.Point(801, 17);
+            this.Host.Name = "Host";
+            this.Host.Size = new System.Drawing.Size(112, 33);
+            this.Host.TabIndex = 2;
+            this.Host.Text = "Host";
+            this.Host.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -704,6 +736,29 @@
             this.tabPage5.Text = "Информация";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label11.Location = new System.Drawing.Point(189, 372);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 17);
+            this.label11.TabIndex = 15;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(36, 372);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(147, 17);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Потребителско име :";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // button21
             // 
             this.button21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -831,87 +886,45 @@
             this.label1.Text = "By Mikrosoft Team";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Host
+            // Monday
             // 
-            this.Host.Location = new System.Drawing.Point(801, 17);
-            this.Host.Name = "Host";
-            this.Host.Size = new System.Drawing.Size(112, 33);
-            this.Host.TabIndex = 2;
-            this.Host.Text = "Host";
-            this.Host.UseVisualStyleBackColor = true;
+            this.Monday.DataPropertyName = "1";
+            this.Monday.HeaderText = "Понеделник";
+            this.Monday.Name = "Monday";
+            this.Monday.ReadOnly = true;
+            this.Monday.Width = 94;
             // 
-            // Connect
+            // Column1
             // 
-            this.Connect.Location = new System.Drawing.Point(801, 75);
-            this.Connect.Name = "Connect";
-            this.Connect.Size = new System.Drawing.Size(112, 33);
-            this.Connect.TabIndex = 3;
-            this.Connect.Text = "Connect";
-            this.Connect.UseVisualStyleBackColor = true;
+            this.Column1.DataPropertyName = "2";
+            this.Column1.HeaderText = "Вторник";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 74;
             // 
-            // Close
+            // Srqda
             // 
-            this.Close.Location = new System.Drawing.Point(801, 130);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(112, 33);
-            this.Close.TabIndex = 4;
-            this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = true;
+            this.Srqda.DataPropertyName = "3";
+            this.Srqda.HeaderText = "Сряда";
+            this.Srqda.Name = "Srqda";
+            this.Srqda.ReadOnly = true;
+            this.Srqda.Width = 63;
             // 
-            // label10
+            // Chetwyrtyk
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(798, 176);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(17, 13);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "IP";
+            this.Chetwyrtyk.DataPropertyName = "4";
+            this.Chetwyrtyk.HeaderText = "Четвъртък";
+            this.Chetwyrtyk.Name = "Chetwyrtyk";
+            this.Chetwyrtyk.ReadOnly = true;
+            this.Chetwyrtyk.Width = 88;
             // 
-            // IPtextBox
+            // Petyk
             // 
-            this.IPtextBox.Location = new System.Drawing.Point(801, 193);
-            this.IPtextBox.Name = "IPtextBox";
-            this.IPtextBox.Size = new System.Drawing.Size(100, 20);
-            this.IPtextBox.TabIndex = 6;
-            // 
-            // PortTextBox
-            // 
-            this.PortTextBox.Location = new System.Drawing.Point(801, 249);
-            this.PortTextBox.Name = "PortTextBox";
-            this.PortTextBox.Size = new System.Drawing.Size(100, 20);
-            this.PortTextBox.TabIndex = 7;
-            // 
-            // Port
-            // 
-            this.Port.AutoSize = true;
-            this.Port.Location = new System.Drawing.Point(798, 233);
-            this.Port.Name = "Port";
-            this.Port.Size = new System.Drawing.Size(26, 13);
-            this.Port.TabIndex = 8;
-            this.Port.Text = "Port";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(189, 372);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(0, 17);
-            this.label11.TabIndex = 15;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(36, 372);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(147, 17);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Потребителско име :";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.Petyk.DataPropertyName = "5";
+            this.Petyk.HeaderText = "Петък";
+            this.Petyk.Name = "Petyk";
+            this.Petyk.ReadOnly = true;
+            this.Petyk.Width = 64;
             // 
             // Form1
             // 
@@ -992,11 +1005,6 @@
         private System.Windows.Forms.Button Class11;
         private System.Windows.Forms.Button Class10;
         private System.Windows.Forms.Button Class9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Monday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Srqda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Chetwyrtyk;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Petyk;
         private System.Windows.Forms.Label Port;
         private System.Windows.Forms.TextBox PortTextBox;
         private System.Windows.Forms.TextBox IPtextBox;
@@ -1006,6 +1014,11 @@
         private System.Windows.Forms.Button Host;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monday;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Srqda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Chetwyrtyk;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Petyk;
     }
 }
 
