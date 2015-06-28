@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HackTUES3;
 
 namespace HackTUES_Windows
 {
@@ -306,21 +307,23 @@ namespace HackTUES_Windows
                 Update.Show();
                 Update.Enabled = true;
             }
+
+           
         }
 
         private void CClass_Click(object sender, EventArgs e)
         {
-            type = "В";
             //if(Globals.permission>0) Update.Show();
             dataGridView1.Show();
+            MySQLFunctions.GetDataTable(klas, 3, dataGridView1);
             //MessageBox.Show(klas + type);
         }
 
         private void DClass_Click(object sender, EventArgs e)
         {
-            type = "Г";
             //if(Globals.permission>0) Update.Show();
             dataGridView1.Show();
+            MySQLFunctions.GetDataTable(klas, 4, dataGridView1);
             //MessageBox.Show(klas + type);
         }
 
@@ -351,18 +354,17 @@ namespace HackTUES_Windows
 
         private void BClass_Click(object sender, EventArgs e)
         {
-            type = "Б";
             //if(Globals.permission>0) Update.Show();
             // MessageBox.Show(klas+type);
             dataGridView1.Show();
-
+            MySQLFunctions.GetDataTable(klas, 2, dataGridView1);
         }
 
         private void button22_Click(object sender, EventArgs e)
         {
-            type = "А";
             //if (Globals.permission > 0) Update.Show();
             dataGridView1.Show();
+            MySQLFunctions.GetDataTable(klas,1,dataGridView1);
             // MessageBox.Show(klas + type);
         }
 
