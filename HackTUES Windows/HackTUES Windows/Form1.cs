@@ -14,7 +14,7 @@ namespace HackTUES_Windows
     {
         int klas;
         string type;
-        string site = "http://localhost:12345/";
+        string site = "http://192.168.0.10:12345/";
         public Form1()
         {
             InitializeComponent();
@@ -25,23 +25,22 @@ namespace HackTUES_Windows
             webBrowser1.ScriptErrorsSuppressed = true;
             webBrowser2.ScriptErrorsSuppressed = true;
             webBrowser2.Navigate(site + "News/index.html");
-            /*switch (Globals.permission)
+            switch (Globals.permission)
             {
-                case 0: label9.Text = "Ученик";
-                case 1: label9.Text = "Учител";
-                case 2: label9.Text = "Администратор";
-                default: label9.Text = "Неизвестно";
+                case 0: label9.Text = "Ученик"; break;
+                case 1: label9.Text = "Учител"; break;
+                case 2: label9.Text = "Администратор"; break;
+                default: label9.Text = "Неизвестно"; break;
             }
+            label11.Text = Globals.loginuser;
             if (Globals.permission == 2)
             {
                 button21.Show();
-                button21.Enable();
             }
             else
             {
                 button21.Hide();
-                button21.Disable();
-            }*/
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -254,8 +253,8 @@ namespace HackTUES_Windows
         {
 
             Form2 frm2 = new Form2();
-            frm2.Show();
-            if (Globals.permission < 1) MessageBox.Show("You don't have the permissions to do this.");
+            if (Globals.permission < 1) { MessageBox.Show("You don't have the permissions to do this."); button21.Enabled = false; }
+            else frm2.Show();
 
 
         }
@@ -277,6 +276,11 @@ namespace HackTUES_Windows
             BClass.Enabled = true;
             CClass.Enabled = true;
             DClass.Enabled = true;
+            if(Globals.permission > 0)
+            {
+                Update.Show();
+                Update.Enabled = true;
+            }
         
         }
 
@@ -297,6 +301,11 @@ namespace HackTUES_Windows
             BClass.Enabled = true;
             CClass.Enabled = true;
             DClass.Enabled = true;
+            if (Globals.permission > 0)
+            {
+                Update.Show();
+                Update.Enabled = true;
+            }
         }
 
         private void CClass_Click(object sender, EventArgs e)
@@ -304,7 +313,7 @@ namespace HackTUES_Windows
             type = "В";
             //if(Globals.permission>0) Update.Show();
             dataGridView1.Show();
-            MessageBox.Show(klas + type);
+            //MessageBox.Show(klas + type);
         }
 
         private void DClass_Click(object sender, EventArgs e)
@@ -312,7 +321,7 @@ namespace HackTUES_Windows
             type = "Г";
             //if(Globals.permission>0) Update.Show();
             dataGridView1.Show();
-            MessageBox.Show(klas + type);
+            //MessageBox.Show(klas + type);
         }
 
         private void Class11_Click(object sender, EventArgs e)
@@ -332,6 +341,11 @@ namespace HackTUES_Windows
             BClass.Enabled = true;
             CClass.Enabled = true;
             DClass.Enabled = true;
+            if (Globals.permission > 0)
+            {
+                Update.Show();
+                Update.Enabled = true;
+            }
         
         }
 
@@ -339,7 +353,7 @@ namespace HackTUES_Windows
         {
             type = "Б";
             //if(Globals.permission>0) Update.Show();
-            MessageBox.Show(klas+type);
+            // MessageBox.Show(klas+type);
             dataGridView1.Show();
 
         }
@@ -349,12 +363,12 @@ namespace HackTUES_Windows
             type = "А";
             //if (Globals.permission > 0) Update.Show();
             dataGridView1.Show();
-            MessageBox.Show(klas + type);
+            // MessageBox.Show(klas + type);
         }
 
         private void Update_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("In future update.");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -379,6 +393,11 @@ namespace HackTUES_Windows
             BClass.Enabled = true;
             CClass.Enabled = true;
             DClass.Enabled = true;
+            if (Globals.permission > 0)
+            {
+                Update.Show();
+                Update.Enabled = true;
+            }
         }
 
 /*9*/   private void Class9_Click(object sender, EventArgs e)
@@ -398,6 +417,11 @@ namespace HackTUES_Windows
             BClass.Enabled = true;
             CClass.Enabled = true;
             DClass.Enabled = true;
+            if (Globals.permission > 0)
+            {
+                Update.Show();
+                Update.Enabled = true;
+            }
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -418,6 +442,26 @@ namespace HackTUES_Windows
             DClass.Hide();
             dataGridView1.Hide();
             Update.Hide();
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
 
         }
     }

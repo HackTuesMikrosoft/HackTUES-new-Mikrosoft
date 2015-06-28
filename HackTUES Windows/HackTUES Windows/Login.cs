@@ -21,6 +21,7 @@ namespace HackTUES_Windows
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Globals.loginuser = textBox1.Text;
             Globals.permission = MySQLFunctions.FindUser(textBox1.Text,maskedTextBox1.Text);
             if (Globals.permission == -1)
             {

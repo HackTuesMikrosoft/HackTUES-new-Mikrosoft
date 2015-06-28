@@ -40,7 +40,6 @@ namespace HackTUES_Windows
                 case 1: prm = 1; break;
                 case 2: prm = 2; break;
             }
-            MessageBox.Show(textBox50.Text, prm.ToString());
             MySQLFunctions.ChangePerms(textBox50.Text, prm);
             this.Hide();
         }

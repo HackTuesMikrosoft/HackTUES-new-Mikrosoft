@@ -10,5 +10,6 @@ namespace HackTUES_Windows
     public class Globals
     {
         public static int permission;
+        public static string loginuser;
     }
 }

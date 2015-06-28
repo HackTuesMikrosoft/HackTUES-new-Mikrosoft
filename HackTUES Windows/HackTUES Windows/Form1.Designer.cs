@@ -87,6 +87,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Host = new System.Windows.Forms.Button();
+            this.Connect = new System.Windows.Forms.Button();
+            this.Close = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.IPtextBox = new System.Windows.Forms.TextBox();
+            this.PortTextBox = new System.Windows.Forms.TextBox();
+            this.Port = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -334,6 +343,13 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Gray;
+            this.tabPage3.Controls.Add(this.Port);
+            this.tabPage3.Controls.Add(this.PortTextBox);
+            this.tabPage3.Controls.Add(this.IPtextBox);
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.Close);
+            this.tabPage3.Controls.Add(this.Connect);
+            this.tabPage3.Controls.Add(this.Host);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -349,7 +365,6 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(984, 504);
             this.label6.TabIndex = 0;
-            this.label6.Text = "In future update ...";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
@@ -668,6 +683,8 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.label12);
             this.tabPage5.Controls.Add(this.button21);
             this.tabPage5.Controls.Add(this.label9);
             this.tabPage5.Controls.Add(this.label8);
@@ -685,6 +702,7 @@
             this.tabPage5.Size = new System.Drawing.Size(984, 504);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Информация";
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // button21
             // 
@@ -702,7 +720,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(163, 404);
+            this.label9.Location = new System.Drawing.Point(161, 399);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 17);
             this.label9.TabIndex = 12;
@@ -712,7 +730,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(37, 402);
+            this.label8.Location = new System.Drawing.Point(35, 399);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 17);
             this.label8.TabIndex = 11;
@@ -813,6 +831,88 @@
             this.label1.Text = "By Mikrosoft Team";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Host
+            // 
+            this.Host.Location = new System.Drawing.Point(801, 17);
+            this.Host.Name = "Host";
+            this.Host.Size = new System.Drawing.Size(112, 33);
+            this.Host.TabIndex = 2;
+            this.Host.Text = "Host";
+            this.Host.UseVisualStyleBackColor = true;
+            // 
+            // Connect
+            // 
+            this.Connect.Location = new System.Drawing.Point(801, 75);
+            this.Connect.Name = "Connect";
+            this.Connect.Size = new System.Drawing.Size(112, 33);
+            this.Connect.TabIndex = 3;
+            this.Connect.Text = "Connect";
+            this.Connect.UseVisualStyleBackColor = true;
+            // 
+            // Close
+            // 
+            this.Close.Location = new System.Drawing.Point(801, 130);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(112, 33);
+            this.Close.TabIndex = 4;
+            this.Close.Text = "Close";
+            this.Close.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(798, 176);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(17, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "IP";
+            // 
+            // IPtextBox
+            // 
+            this.IPtextBox.Location = new System.Drawing.Point(801, 193);
+            this.IPtextBox.Name = "IPtextBox";
+            this.IPtextBox.Size = new System.Drawing.Size(100, 20);
+            this.IPtextBox.TabIndex = 6;
+            // 
+            // PortTextBox
+            // 
+            this.PortTextBox.Location = new System.Drawing.Point(801, 249);
+            this.PortTextBox.Name = "PortTextBox";
+            this.PortTextBox.Size = new System.Drawing.Size(100, 20);
+            this.PortTextBox.TabIndex = 7;
+            // 
+            // Port
+            // 
+            this.Port.AutoSize = true;
+            this.Port.Location = new System.Drawing.Point(798, 233);
+            this.Port.Name = "Port";
+            this.Port.Size = new System.Drawing.Size(26, 13);
+            this.Port.TabIndex = 8;
+            this.Port.Text = "Port";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label11.Location = new System.Drawing.Point(189, 372);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 17);
+            this.label11.TabIndex = 15;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label12.Location = new System.Drawing.Point(36, 372);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(147, 17);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Потребителско име :";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(989, 528);
@@ -821,11 +921,13 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HackTUES";
+            this.Load += new System.EventHandler(this.Form1_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -895,6 +997,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Srqda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Chetwyrtyk;
         private System.Windows.Forms.DataGridViewTextBoxColumn Petyk;
+        private System.Windows.Forms.Label Port;
+        private System.Windows.Forms.TextBox PortTextBox;
+        private System.Windows.Forms.TextBox IPtextBox;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button Connect;
+        private System.Windows.Forms.Button Host;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 
